@@ -1,7 +1,7 @@
 // Principles
-// Single Responsibility Principle :: Você pode mover o código de criação do produto 
+// Single Responsibility Principle :: Você pode mover o código de criação do produto
 //    para um local no programa, facilitando o suporte do código.
-// Open/Closed Principle :: Você pode introduzir novos tipos de produtos no programa 
+// Open/Closed Principle :: Você pode introduzir novos tipos de produtos no programa
 //    sem quebrar o código do cliente existente
 
 // Logistic APP
