@@ -8,7 +8,7 @@ void main(List<String> arguments) {
     if (results["help"]) {
       print(parser.usage);
     }
-  } catch (_) {
+  } on Exception catch (_) {
     print(parser.usage);
   }
 }
@@ -43,4 +43,22 @@ ArgParser buildArgs() => ArgParser()
     help: "Creational > Builder > Bike",
     allowedHelp: {"u": "Urban bike", "e": "Eletric bike"},
     callback: (type) => execute(type, builder),
+  )
+  ..addOption(
+    "vehicle",
+    abbr: "v",
+    help: "Creational > Prototype > Vehicle",
+    allowedHelp: {"suv": "Clone SUV", "sed": "Clone Sedan"},
+    callback: (type) => execute(type, prototype),
+  )
+  ..addOption(
+    "instance",
+    abbr: "i",
+    help: "Creational > Singleton > Instance",
+    allowedHelp: {
+      "d": "Default",
+      "db": "Database",
+      "e": "Encrypt",
+    },
+    callback: (type) => execute(type, singleton),
   );
